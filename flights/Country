@@ -1,0 +1,24 @@
+Country
+            "PlaceId": 1811,
+            "Name": "United States",
+            "Type": "Country",
+            "SkyscannerCode": "US"
+            
+            City
+            "PlaceId": 3579769,
+            "IataCode": "PAR",
+            "Name": "Paris",
+            "Type": "City",
+            "SkyscannerCode": "PARI",
+            "CityName": "Paris",
+            "CityId": "PARI"
+            
+            Airport
+            "PlaceId": 44759,
+            "IataCode": "CDG",
+            "Name": "Paris Charles de Gaulle",
+            "Type": "Station",
+            "SkyscannerCode": "CDG",
+            "CityName": "Paris",
+            "CityId": "PARI",
+            "CountryName": "France"
