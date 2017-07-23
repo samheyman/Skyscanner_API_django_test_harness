@@ -49,7 +49,7 @@ div {
     font-size: 12px;
 }
 
-#imageLimit {
+#imageLimit, #deviceType {
     height: 33px;
 }
 
@@ -75,6 +75,11 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 #hourglass {
   display: none;
 }
+
+#repro-url {
+  display: none;
+}
+
 #testharnessresult {
   /* form */
   /* results */
