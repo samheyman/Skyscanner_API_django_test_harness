@@ -20,7 +20,7 @@
                 <div class="float-left date-picker form-group datepicker-container">
 	                <label for="checkindate">Check-in</label>
 	                <div class="input-group date">
-					    <input type="text" class="form-control" name="checkindate" id="checkindate">
+					    <input type="text" class="form-control" name="checkindate" id="checkindate" value="2017-09-21">
 					    <span class="input-group-addon">
 					        <i class="glyphicon glyphicon-th"></i>
 					    </span>
@@ -29,7 +29,7 @@
 				<div class="float-left date-picker form-group datepicker-container">
 	                <label for="checkoutdate">Check-out</label>
 	                <div class="input-group date">
-					    <input type="text" class="form-control" name="checkoutdate" id="checkoutdate">
+					    <input type="text" class="form-control" name="checkoutdate" id="checkoutdate" value="2017-09-23">
 					    <span class="input-group-addon">
 					        <i class="glyphicon glyphicon-th"></i>
 					    </span>
@@ -107,7 +107,14 @@
                 </div>
             </div>
             <div class="float-left">
-                    <label for="deviceType">Device type <span data-toggle="tooltip" class="test-harness-hint-button glyphicon glyphicon-question-sign" title="You need to add a request header to the call. The format is 'x-user-agent: <device>;B2B' where <device> can be D for desktop, T for tablet, M for mobile and N if you are not able to detect the device type."></span></label>
+                    <label for="enhancers">Additional info (enhancers) <span data-toggle="tooltip" class=" glyphicon glyphicon-question-sign" title="Enhancers allow you to specify additional information to be returned (e.g. images)."></span></label>
+                    <select name="enhancers" id="enhancers">
+                        <option value="images">Images</option>
+                    </select>
+                </div>
+
+            <div class="float-left">
+                    <label for="deviceType">Device type <span data-toggle="tooltip" class=" glyphicon glyphicon-question-sign" title="You need to add a request header to the call. The format is 'x-user-agent: <device>;B2B' where <device> can be D for desktop, T for tablet, M for mobile and N if you are not able to detect the device type."></span></label>
                     <select name="deviceType" id="deviceType">
                         <option value="D">Desktop (D)</option>
                         <option value="T">Tablet (T)</option>
@@ -127,16 +134,28 @@
 </section>
 
 <pre id="repro-url"></pre>
-<script type="text/html" id="resultsTableTemplate">
-<table>
-    <tr><td></td></tr>
-</table>
-</script>
 
-<table>
+<div class="errors"></div>
+
+<div id="testharnessresult" class="results">
+    <div class="test-harness-tabs">
+        <ul class="nav nav-tabs">
+            <li><a id="preview-data-tab" href="#preview" data-toggle="tab">Preview</a></li>
+            <li><a id="raw-data-tab" href="#raw" data-toggle="tab">Raw</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane" id="preview">
+                <table id="resultstable"></table>
+            </div>
+            <div class="tab-pane" id="raw">
+                <pre contenteditable id="rawDataTemplate" class='language-javascript'></pre>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+</div>
+    
 	
-
-</table>
-
 </div>
 {% endblock main %}
